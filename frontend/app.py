@@ -203,13 +203,12 @@ def main():
                     preview_image = Image.open(io.BytesIO(st.session_state["prebuilt_original"]))
                     st.image(
                         preview_image,
-                        caption=st.session_state.get("prebuilt_filename", "Uploaded image"),
-                        use_container_width=True
+                        caption=st.session_state.get("prebuilt_filename", "Uploaded image")
                     )
                 else:
                     st.info("Upload an image to preview it here.")
 
-                if st.button("✨ Apply Convolution", type="primary", use_container_width=True, key="apply_prebuilt"):
+                if st.button("✨ Apply Convolution", type="primary", key="apply_prebuilt"):
                     if st.session_state["prebuilt_original"] is None:
                         st.warning("Please upload an image before applying the filter.")
                     else:
@@ -230,14 +229,13 @@ def main():
                 if st.session_state["prebuilt_result"]:
                     result_image = Image.open(io.BytesIO(st.session_state["prebuilt_result"]))
                     kernel_title = (st.session_state.get("prebuilt_kernel_name") or "Filtered").replace("_", " ").title()
-                    st.image(result_image, caption=f"{kernel_title}", use_container_width=True)
+                    st.image(result_image, caption=f"{kernel_title}")
 
                     st.download_button(
                         label="⬇️ Download Result",
                         data=st.session_state["prebuilt_result"],
                         file_name=f"convolved_{st.session_state.get('prebuilt_kernel_name', 'image')}.png",
                         mime="image/png",
-                        use_container_width=True,
                         key="download_prebuilt"
                     )
                 else:
@@ -299,8 +297,7 @@ def main():
                 preview_image = Image.open(io.BytesIO(st.session_state["custom_original"]))
                 st.image(
                     preview_image,
-                    caption=st.session_state.get("custom_filename", "Uploaded image"),
-                    use_container_width=True
+                    caption=st.session_state.get("custom_filename", "Uploaded image")
                 )
             else:
                 st.info("Upload an image to preview it here.")
@@ -310,7 +307,6 @@ def main():
             if st.button(
                 "✨ Apply Custom Convolution",
                 type="primary",
-                use_container_width=True,
                 key="apply_custom",
                 disabled=apply_disabled
             ):
@@ -329,14 +325,13 @@ def main():
 
             if st.session_state["custom_result"]:
                 result_image = Image.open(io.BytesIO(st.session_state["custom_result"]))
-                st.image(result_image, caption="Custom Kernel Result", use_container_width=True)
+                st.image(result_image, caption="Custom Kernel Result")
 
                 st.download_button(
                     label="⬇️ Download Result",
                     data=st.session_state["custom_result"],
                     file_name="convolved_custom.png",
                     mime="image/png",
-                    use_container_width=True,
                     key="download_custom"
                 )
             else:
