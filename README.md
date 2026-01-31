@@ -108,3 +108,4 @@ The UI launches at [http://localhost:8501](http://localhost:8501).
 
 MIT License – feel free to extend or adapt the project.
 # Image-Kernel-Convolution-Engine
+# Image-Kernel-Convolution-Engine
