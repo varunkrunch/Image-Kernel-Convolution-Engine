@@ -80,6 +80,8 @@ The UI launches at [http://localhost:8501](http://localhost:8501).
    - Upload an image (`≤ 2 MB`).
    - Click **“Apply Convolution”** to view and download the result.
 
+   ![Streamlit interface showing pre-built kernel workflow](docs/images/streamlit-prebuilt.png)
+
 2. **Custom Kernel**
    - Switch “Select Mode” to **Custom Kernel**.
    - Enter a JSON matrix (must be square, odd-sized between 3×3 and 11×11).
@@ -89,6 +91,8 @@ The UI launches at [http://localhost:8501](http://localhost:8501).
    - Upload an image (`≤ 2 MB`).
    - The app validates the kernel through the `/kernels/custom` API before enabling **Apply**.
    - After processing, download the transformed image.
+
+   ![Streamlit interface showing custom kernel workflow](docs/images/streamlit-custom.png)
 
 > The frontend sends the original uploaded bytes to the backend. Re-saving large JPEGs as PNGs can inflate size—if you still hit the 2 MB limit, resize or compress the image prior to upload.
 

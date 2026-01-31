@@ -249,7 +249,7 @@ def main():
             default_kernel = [[0, -1, 0], [-1, 5, -1], [0, -1, 0]]
             kernel_text = st.text_area(
                 "Enter kernel matrix (JSON format)",
-                value=json.dumps(default_kernel, indent=2),
+                value=json.dumps(default_kernel),
                 help="Provide a square matrix with odd dimensions (e.g., 3x3, 5x5).",
                 height=180,
                 key="custom_kernel_text"
