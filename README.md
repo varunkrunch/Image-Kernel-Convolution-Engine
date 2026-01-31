@@ -104,4 +104,3 @@ The UI launches at [http://localhost:8501](http://localhost:8501).
 | Streamlit cannot connect to API | Ensure the backend is running at `http://localhost:8000`. If using another host/port, change `API_URL` in `frontend/app.py`. |
 | “File too large. Maximum size is 2MB” | Verify the original file size; if still under 2 MB, recompress or resize before upload. |
 
-# Image-Kernel-Convolution-Engine
