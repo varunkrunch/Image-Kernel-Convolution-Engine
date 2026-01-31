@@ -59,6 +59,8 @@ uvicorn main:app --reload
 | `POST` | `/kernels/custom` | Validates a custom kernel matrix |
 | `POST` | `/transform/convolution` | Applies a kernel to an uploaded image |
 
+![FastAPI docs showing available endpoints](docs/images/fastapi-endpoints.png)
+
 ## Running the Frontend
 
 In a second terminal (keep the backend running):
